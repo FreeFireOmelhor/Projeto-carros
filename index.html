@@ -1,23 +1,37 @@
-
-<html>
+<!DOCTYPE html>
+<html lang="pt">
 <head>
-    <title>Carro Interativo</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carro e Caminhão</title>
+    <link rel="stylesheet" href="CSS/style.css">
+  </head>
+  <body>
+    <h1>Interação com Veículos</h1>
+    <div class="container">
+        <div class="veiculo" id="carroEsportivo">
+            <h2>Carro Esportivo</h2>
+            <img src="imagens/ForbesLife_Mustang_140421_Divulgaçao.webp" alt="#">
+            <p id="statusCarro">Velocidade: 0 km/h</p>
+            <button onclick="ligarCarro()">Ligar</button>
+            <button onclick="acelerarCarro()">Acelerar</button>
+            <button onclick="ativarTurbo()">Ativar Turbo</button>
+            <button onclick="desligarCarro()">Desligar</button>
+            <button onclick="buzinarCarro()">Buzinar</button>
+        </div>
+        <div class="veiculo" id="caminhao">
+            <h2>Caminhão</h2>
+            <img src="imagens/post_thumbnail-202a057ca0f22fd98cdd70cca72f5b1a-780x450.jpg" alt="#">
+            <p id="statusCaminhao">Carga: 0/20 toneladas</p>
+            <button onclick="ligarCaminhao()">Ligar</button>
+            <button onclick="carregarCaminhao()">Carregar</button>
+            <button onclick="descarregarCaminhao()">Descarregar</button>
+            <button onclick="desligarCaminhao()">Desligar</button>
+            <button onclick="buzinarCaminhao()">Buzinar</button>
+        </div>
+    </div>
+    <audio id="TurboCarro" src="AUDIOS/motor-racing-car-race-turismo-carretera-273232.mp3"></audio>
+    <audio id="buzinaCaminhao" src="AUDIOS/truck-horn-2-280800.mp3"></audio>
+    <script src="java.js"></script>
 <body>
-    <h1>Meu Carro</h1>
-    <img id="script.js" src="Imagens/carro conceitual.jpg" alt="#">
-    <audio controls>
-        <source src="Audio/O V12 mais afinado que você vai ouvir. Aventador com Secret Weapon. (online-audio-converter.com).wav" Type="Audio/x-wav">
-    </audio>
-    <p>Modelo: <span id="modeloCarro"></span></p>
-    <p>Cor: <span id="corCarro"></span></p>
-    <p>Velocidade: <span id="velocidadeCarro">0</span> km/h</p>
-
-    <button id="ligarBotao">Ligar</button>
-    <button id="desligarBotao">Desligar</button>
-    <button id="acelerarBotao">Acelerar</button>
-
-    <script src="script.js"></script>
-</body>
-</html>
+<html>
