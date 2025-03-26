@@ -1,49 +1,41 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carro e Caminhão</title>
-    <link rel="stylesheet" href="CSS/style.css">
-    <link rel="stylesheet" href="java.js">
-  </head>
-  <body>
-    <h1>Interação com Veículos</h1>
-    <div class="container">
-        <div class="veiculo" id="carroEsportivo">
-            <h2>Carro Esportivo</h2>
-            <img src="imagens/ForbesLife_Mustang_140421_Divulgaçao.webp" alt="#">
-            <p id="statusCarro">Velocidade: 0 km/h</p>
-            <button onclick="ligarCarro()">Ligar</button>
-            <button onclick="acelerarCarro()">Acelerar</button>
-            <button onclick="ativarTurbo()">Turbo</button>
-            <button onclick="desligarCarro()">Desligar</button>
-        </div>
-        <div class="veiculo" id="caminhao">
-            <h2>Caminhão</h2>
-            <img src="IMAGENS/post_thumbnail-202a057ca0f22fd98cdd70cca72f5b1a-780x450 (1).jpg" alt="#">
-            <p id="statusCaminhao">Carga: 0/40 toneladas</p>
-            <button onclick="ligarCaminhao()">Ligar</button>
-            <button onclick="carregarCaminhao()">Carga</button>
-            <button onclick="descarregarCaminhao()">Descarga</button>
-            <button onclick="desligarCaminhao()">Desligar</button>
-            <button onclick="buzinarCaminhao()">Buzinar</button>
-        </div>
-        <div class="veiculo" id="carroBase">
-            <h2>Carro Base</h2>
-            <img src="IMAGENS/svozhmwvrclc1.webp" alt="#">
-            <p id="statusCarro">Velocidade: 0 km/h</p>
-            <button onclick="ligarCarro()">Ligar</button>
-            <button onclick="acelerarCarro()">Acelerar</button>
-            <button onclick="ativarTurbo()">Turbo</button>
-            <button onclick="desligarCarro()">Desligar</button>
-            <button onclick="buzinarCarro()">Buzinar</button>
-        </div>
-        </div>
-          </div>
-    <audio id="TurboCarro" src="AUDIOS/motor-racing-car-race-turismo-carretera-273232.mp3"></audio>
-    <audio id="buzinaCaminhao" src="AUDIOS/truck-horn-2-280800.mp3"></audio>
-    <script src="java.js"></script>
+    <title>Garagem Interativa</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
 <body>
-<html> 
-   
+    <header>
+        <h1>Bem-vindo à Garagem!</h1>
+    </header>
+
+    <main>
+        <section id="selecao-veiculo">
+            <h2>Escolha seu veículo:</h2>
+            <div class="veiculos">
+                <img src="imagens/svozhmwvrclc1.webp" alt="Carro Normal" data-veiculo="normal">
+                <img src="imagens/ForbesLife_Mustang_140421_Divulgaçao.webp" alt="Carro Esportivo" data-veiculo="esportivo">
+                <img src="imagens/post_thumbnail-202a057ca0f22fd98cdd70cca72f5b1a-780x450.jpg" alt="Caminhão" data-veiculo="caminhao">
+            </div>
+        </section>
+
+        <section id="controles-veiculo">
+            <h2>Controles:</h2>
+            <div id="status"></div>
+            <div id="velocimetro">Velocidade: <span>0</span> km/h</div>  <!-- Novo: Velocímetro -->
+            <button id="ligar">Ligar</button>
+            <button id="acelerar">Acelerar</button>
+            <button id="frear">Frear</button>
+            <button id="desligar">Desligar</button>
+            <button id="turbo" style="display: none;">Turbo</button>
+            <button id="carregar" style="display: none;">Carregar</button>
+            <button id="descarregar" style="display: none;">Descarregar</button>
+            <button id="buzinar">Buzinar</button>   <!-- Novo: Botão da buzina -->
+        </section>
+    </main>
+
+    <script src="js/java.js"></script>
+</body>
+</html>

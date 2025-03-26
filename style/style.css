@@ -1,0 +1,49 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e3e3eb;
+}
+
+header {
+    background-color: #111010;
+    color: rgb(0, 255, 255);
+    text-align: center;
+    padding: 1em;
+}
+
+button{
+    color: rgb(250, 0, 0);
+    background-color: rgb(112, 111, 112)
+}
+
+main {
+    padding: 20px;
+}
+
+#selecao-veiculo {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.veiculos img {
+    width: 150px;
+    margin: 10px;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.veiculos img:hover {
+    border-color: #007bff;
+}
+
+#controles-veiculo {
+    text-align: center;
+}
+
+#controles-veiculo button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
